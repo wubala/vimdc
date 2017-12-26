@@ -8,3 +8,5 @@ cscope  -bkq -i cscope.files
 
 #使用Vundle管理vim的插件
 https://www.cnblogs.com/davidhhuan/archive/2013/01/06/2846982.html
+
+https://www.jianshu.com/p/mHUR4e
