@@ -130,11 +130,9 @@ nmap tn :set nohls<CR>
 nmap to :cw<CR>
 nmap tc :cclose<CR>
 nmap t; :close<CR>
-"nmap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr> 
+nmap tm :marks<CR>
+nmap tl :Tlist<cr>
 endif"
-"set hlsearch
-nmap t7 :set hlsearch<CR>
-nmap t8 :nohlsearch<CR>
 "-- Taglist setting --
 let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
 let Tlist_Use_Right_Window=1"让窗口显示在右边，0的话就是显示在左边
@@ -149,4 +147,3 @@ let Tlist_Inc_Winwidth=0"
 let g:winManagerWindowLayout='FileExplorer' " 设置我们要管理的插件
 let g:persistentBehaviour=0 " 如果所有编辑文件都关闭了，退出vim
 nmap wm :WMToggle<cr>
-nmap wt :Tlist<cr>
