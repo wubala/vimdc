@@ -9,7 +9,12 @@ colorscheme solarized
 "colorscheme default 
 "let g:molokai_original=1
 "set t_Co=256
-nmap <leader>w :q!<CR>
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
+set smarttab
+set autoindent
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "hi CursorLine   cterm=NONE ctermbg=yellow ctermfg=white guibg=darkred guifg=white
@@ -32,7 +37,7 @@ Plugin 'VundleVim/Vundle.vim'
 " " 请将安装插件的命令放在vundle#begin和vundle#end之间.
 " " Github上的插件
 " " 格式为 Plugin '用户名/插件仓库名'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 " " 来自 http://vim-scripts.org/vim/scripts.html 的插件
 "Plugin '插件名称' 实际上是 Plugin 'vim-scripts/插件仓库名'
 " 只是此处的用户名可以省略
@@ -43,7 +48,7 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " " 插件在仓库的子目录中.
 " " 正确指定路径用以设置runtimepath. 以下范例插件在sparkup/vim目录下
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'winmanager'
 " " 安装L9，如果已经安装过这个插件，可利用以下格式避免命名冲突
 Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -52,40 +57,40 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 " completion/coding
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs' "自动括号匹配
-Plugin 'scrooloose/nerdcommenter'
-Plugin'tpope/vim-surround'
-Plugin 'junegunn/vim-easy-align'
+"Plugin 'scrooloose/nerdcommenter'
+" Plugin'tpope/vim-surround'
+"Plugin 'junegunn/vim-easy-align'
 " looking
 Plugin 'Yggdroot/indentLine'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'myusuf3/numbers.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'morhetz/gruvbox'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'morhetz/gruvbox'
+"Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 " utils
 Plugin 'asins/vimcdoc'
 Plugin 'Mark--Karkat'
-Plugin 'repeat.vim'
-Plugin 'ccvext.vim'
+"Plugin 'repeat.vim'
+"Plugin 'ccvext.vim'
 Plugin 'CodeFalling/fcitx-vim-osx'
-Plugin 'rhysd/nyaovim-markdown-preview'
-Plugin 'kassio/neoterm'
+"Plugin 'rhysd/nyaovim-markdown-preview'
+"Plugin 'kassio/neoterm'
 " navigation
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'wesleyche/SrcExpl'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'wesleyche/SrcExpl'
 Plugin 'majutsushi/tagbar'
 Plugin 'taglist.vim'
-Plugin 'rizzatti/dash.vim'
+"Plugin 'rizzatti/dash.vim'
 " c/c++
 Plugin 'c.vim'
 " java
-Plugin 'artur-shaik/vim-javacomplete2'
+"Plugin 'artur-shaik/vim-javacomplete2'
 
 "html/css/javascript
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 " scala
 Plugin 'ensime/ensime-vim'
 Plugin 'derekwyatt/vim-scala'
@@ -114,14 +119,6 @@ endif
 set csverb
 " 将:cs find c等Cscope查找命令映射为<C-_>c等快捷键（按法是先按Ctrl+Shift+-,
 " 然后很快再按下c）
-nmap <C->s :cs find s <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C->g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C->d :cs find d <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C->c :cs find c <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C->t :cs find t <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C->e :cs find e <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C->f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C->i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
 " QuickFix 上下移动
 nmap tm :cn<CR>
 nmap tp :cp<CR>
@@ -131,12 +128,12 @@ nmap tn :set nohls<CR>
 nmap to :botright cw<CR>
 nmap tc :cclose<CR>
 nmap t; :close<CR>
-nmap tm :marks<CR>
+nmap tk :marks<CR>
 nmap tl :Tlist<cr>
 endif"
 "-- Taglist setting --
 let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
-let Tlist_Use_Right_Window=1"让窗口显示在右边，0的话就是显示在左边
+let Tlist_Use_Right_Window=0"让窗口显示在右边，0的话就是显示在左边
 let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表
 let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
 let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
@@ -148,3 +145,4 @@ let Tlist_Inc_Winwidth=0"
 let g:winManagerWindowLayout='FileExplorer' " 设置我们要管理的插件
 let g:persistentBehaviour=0 " 如果所有编辑文件都关闭了，退出vim
 nmap wm :WMToggle<cr>
+set nocompatible
