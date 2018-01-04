@@ -127,7 +127,8 @@ nmap tm :cn<CR>
 nmap tp :cp<CR>
 nmap th :set hls<CR>
 nmap tn :set nohls<CR>
-nmap to :cw<CR>
+" nmap to :cw<CR>
+nmap to :botright cw<CR>
 nmap tc :cclose<CR>
 nmap t; :close<CR>
 nmap tm :marks<CR>
