@@ -5,6 +5,9 @@
 find . -name '*.py' > cscope.files
 
 cscope  -bkq -i cscope.files 
+find . -name "*.nasl" -o -name "*.inc" > cscope.files
+cscope -bkq -i cscope.files
+ctags -R
 
 #使用Vundle管理vim的插件
 https://www.cnblogs.com/davidhhuan/archive/2013/01/06/2846982.html
