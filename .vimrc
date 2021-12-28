@@ -164,6 +164,8 @@ let Tlist_Use_Right_Window=1"让窗口显示在右边，0的话就是显示在�
 let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表
 let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
 let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
+
+let tlist_nasl_settings = 'nasl;f:function;g:global_var'
 ""是否一直处理tags.1:处理;0:不处理
 let Tlist_Process_File_Always=1 "实时更新tags
 let Tlist_Inc_Winwidth=0"
