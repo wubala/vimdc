@@ -3,7 +3,6 @@
 [vim2]http://vimdoc.sourceforge.net/htmldoc/usr_toc.html
 # cscope 用在python
 find . -name '*.py' > cscope.files
-
 cscope  -bkq -i cscope.files 
 find . -name "*.nasl" -o -name "*.inc" > cscope.files
 cscope -bkq -i cscope.files
