@@ -8,6 +8,7 @@ set background=dark
 "colorscheme default 
 "let g:molokai_original=1
 "set t_Co=256
+let mapleader="4"
 nmap <leader>w :q!<CR>
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -62,16 +63,16 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'morhetz/gruvbox'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 " utils
 Plugin 'asins/vimcdoc'
 Plugin 'Mark--Karkat'
 Plugin 'repeat.vim'
 Plugin 'ccvext.vim'
-Plugin 'CodeFalling/fcitx-vim-osx'
-Plugin 'rhysd/nyaovim-markdown-preview'
-Plugin 'kassio/neoterm'
+"Plugin 'CodeFalling/fcitx-vim-osx'
+"Plugin 'rhysd/nyaovim-markdown-preview'
+"Plugin 'kassio/neoterm'
 " navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -149,8 +150,8 @@ nmap <C->i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
 " QuickFix 上下移动
 nmap td :cn<CR>
 nmap tu :cp<CR>
-nmap th :set hls<CR>
-nmap tn :set nohls<CR>
+"nmap th :set hls<CR>
+"nmap tn :set nohls<CR>
 " nmap to :cw<CR>
 nmap to :botright cw<CR>
 nmap tc :cclose<CR>
