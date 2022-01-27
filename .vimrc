@@ -8,6 +8,7 @@ set background=dark
 "colorscheme default 
 "let g:molokai_original=1
 "set t_Co=256
+"<leader> m mark,n clear,/ netxt,? prevev
 let mapleader="4"
 nmap <leader>w :q!<CR>
 set cursorline
@@ -157,6 +158,7 @@ nmap to :botright cw<CR>
 nmap tc :cclose<CR>
 nmap t; :close<CR>
 nmap tm :marks<CR>
+nmap 4, :MarkClear<CR>
 nmap tl :Tlist<cr>
 endif"
 "-- Taglist setting --
@@ -174,4 +176,6 @@ let Tlist_Inc_Winwidth=0"
 "let g:winManagerWindowLayout='FileExplorer|TagList' " 设置我们要管理的插件
 let g:winManagerWindowLayout='FileExplorer' " 设置我们要管理的插件
 let g:persistentBehaviour=0 " 如果所有编辑文件都关闭了，退出vim
+let g:winManagerWidth = 30
+let g:miniBufExplorerMoreThanOne=0
 nmap wm :WMToggle<cr>
